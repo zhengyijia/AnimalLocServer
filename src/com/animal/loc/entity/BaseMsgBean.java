@@ -1,4 +1,4 @@
-package com.animal.loc.entity.ContentMsgBean;
+package com.animal.loc.entity;
 
 import com.animal.loc.entity.AnimalLocMsg;
 

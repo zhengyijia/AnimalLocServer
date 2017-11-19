@@ -1,6 +1,7 @@
 package com.animal.loc.entity.ContentMsgBean;
 
 import com.animal.loc.entity.AnimalLocMsg;
+import com.animal.loc.entity.BaseMsgBean;
 
 import javax.xml.bind.DatatypeConverter;
 
