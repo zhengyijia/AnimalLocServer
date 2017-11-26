@@ -1,7 +1,12 @@
 group 'com.oneplus'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'server.AnimalLocServer'
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
 
 sourceCompatibility = 1.8
 
