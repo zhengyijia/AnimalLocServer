@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="entity.TableBean.AnimalLocLocInfoEntity" table="AnimalLoc_LocInfo" schema="dbo" catalog="AnimalTest">
+    <class name="entity.TableBean.AnimalLocLocInfoEntity" table="AnimalLoc_LocInfo" schema="dbo" catalog="db_test">
         <composite-id>
             <key-property name="imei" column="IMEI"/>
             <key-property name="time" column="time"/>

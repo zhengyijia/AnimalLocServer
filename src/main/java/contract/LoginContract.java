@@ -10,7 +10,8 @@ public class LoginContract {
     }
 
     public interface ILoginModel {
-
+        // 验证是否存在对应IMEI
+        boolean verifyIMEI(String IMEI);
     }
 
 }

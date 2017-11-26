@@ -31,9 +31,7 @@ public class LoginService implements LoginContract.ILoginService {
     private boolean checkIMEI(LoginMsgBean loginMsgBean) {
         String IMEI = loginMsgBean.getIMEI();
 
-        // TODO: 2017/11/19 添加检查IMEI操作
-
-        return true;
+        return mLoginModel.verifyIMEI(IMEI);
     }
 
 }

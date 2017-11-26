@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.TableBean.AnimalLocImeiEntity" table="AnimalLoc_IMEI" schema="dbo" catalog="db_test">
+        <id name="petId">
+            <column name="pet_id" sql-type="varchar(255)"/>
+        </id>
+        <property name="imei">
+            <column name="IMEI" sql-type="varchar(255)"/>
+        </property>
+    </class>
+</hibernate-mapping>

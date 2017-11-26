@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <!-- 避免中文乱码useUnicode=true&characterEncoding=UTF-8 -->
-        <property name="connection.url">jdbc:sqlserver://localhost;database=AnimalTest</property>
+        <property name="connection.url">jdbc:sqlserver://localhost;database=db_test</property>
         <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="connection.username">AnimalTest</property>
         <property name="connection.password">123456</property>
@@ -15,8 +15,9 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <mapping resource="AnimalLocLocInfoEntity.hbm.xml"/>
+        <mapping resource="AnimalLocImeiEntity.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
