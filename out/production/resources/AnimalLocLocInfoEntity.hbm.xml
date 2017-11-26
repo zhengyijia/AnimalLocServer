@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.TableBean.AnimalLocLocInfoEntity" table="AnimalLoc_LocInfo" schema="dbo" catalog="AnimalTest">
+        <composite-id>
+            <key-property name="imei" column="IMEI"/>
+            <key-property name="time" column="time"/>
+        </composite-id>
+        <!--<property name="imei" column="IMEI"/>-->
+        <!--<property name="time" column="time"/>-->
+        <property name="longitude" column="longitude"/>
+        <property name="latitude" column="latitude"/>
+        <property name="track" column="track"/>
+    </class>
+</hibernate-mapping>

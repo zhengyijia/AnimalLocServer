@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 避免中文乱码useUnicode=true&characterEncoding=UTF-8 -->
+        <property name="connection.url">jdbc:sqlserver://localhost;database=AnimalTest</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="connection.username">AnimalTest</property>
+        <property name="connection.password">123456</property>
+
+        <!-- 注意dialect的值，否则会出现奇怪的问题 -->
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <property name="hbm2ddl.auto">create</property>
+
+        <mapping resource="AnimalLocLocInfoEntity.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
