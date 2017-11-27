@@ -6,13 +6,13 @@ import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
 import org.apache.mina.filter.logging.LoggingFilter;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
+import util.Log4jUtil;
+import util.PropertiesUtil;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
 public class AnimalLocServer {
-
-    public static final int PORT= 8765;
 
     public static void main(String[] args) throws IOException {
 
@@ -30,7 +30,9 @@ public class AnimalLocServer {
         acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 10);
 
         // 设置端口号
-        acceptor.bind(new InetSocketAddress(PORT));
+        String portString = PropertiesUtil.getProperty("mina.properties").getProperty("mina.port");
+        acceptor.bind(new InetSocketAddress(Integer.parseInt(portString)));
+        Log4jUtil.instance.debug("服务端启动...端口：" + portString);
 
     }
 
