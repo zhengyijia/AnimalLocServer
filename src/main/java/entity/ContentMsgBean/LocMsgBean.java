@@ -35,12 +35,12 @@ public class LocMsgBean extends BaseMsgBean {
         satelliteNum = (byte) (content[6] & 0x0f);
 
         // & 0xFF ： 把字节转换成int，避免移位时丢失高位字节
-        longitude = content[10] & 0xFF |
+        latitude = content[10] & 0xFF |
                 (content[9] & 0xFF) << 8 |
                 (content[8] & 0xFF) << 16 |
                 (content[7] & 0xFF) << 24;
 
-        latitude = content[14] & 0xFF |
+        longitude = content[14] & 0xFF |
                 (content[13] & 0xFF) << 8 |
                 (content[12] & 0xFF) << 16 |
                 (content[11] & 0xFF) << 24;
