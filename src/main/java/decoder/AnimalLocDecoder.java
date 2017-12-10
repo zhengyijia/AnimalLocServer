@@ -5,6 +5,7 @@ import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.CumulativeProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
+import util.Log4jUtil;
 
 public class AnimalLocDecoder extends CumulativeProtocolDecoder {
 
@@ -22,13 +23,13 @@ public class AnimalLocDecoder extends CumulativeProtocolDecoder {
             // 检查读取的包头是否正常，不正常的话清空buffer
             if (startBit != 0x7878) {
                 buffer.clear();
-                System.out.println("接收数据的起始位格式不符！");
+                Log4jUtil.instance.info("接收数据的起始位格式不符！");
                 break;
             }
 
             if (packageLen < 1) {
                 buffer.clear();
-                System.out.println("接收数据的长度标识有误！");
+                Log4jUtil.instance.info("接收数据的长度标识有误！");
                 break;
             }
 
@@ -46,7 +47,7 @@ public class AnimalLocDecoder extends CumulativeProtocolDecoder {
                 short endBit = buffer.getShort();
                 if (endBit != 0x0d0a) {
                     buffer.clear();
-                    System.out.println("接收数据的结束位格式不符！");
+                    Log4jUtil.instance.info("接收数据的结束位格式不符！");
                     break;
                 }
                 animalLocMsg.setEndBit(endBit);

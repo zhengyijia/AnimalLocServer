@@ -34,25 +34,25 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
     @Override
     public void sessionCreated(IoSession session){
         // 显示客户端的ip和端口
-        Log4jUtil.instance.debug("服务端与客户端创建连接...");
-        Log4jUtil.instance.debug("客户端ip及端口：" + session.getRemoteAddress().toString());
+        Log4jUtil.instance.info("服务端与客户端创建连接...");
+        Log4jUtil.instance.info("客户端ip及端口：" + session.getRemoteAddress().toString());
     }
 
     @Override
     public void sessionOpened(IoSession session) throws Exception {
-        Log4jUtil.instance.debug("服务端与客户端连接打开...");
+        Log4jUtil.instance.info("服务端与客户端连接打开...");
     }
 
     @Override
     public void messageReceived(IoSession session, Object message) throws Exception {
 
-        Log4jUtil.instance.debug("服务端收到来自" + getIMEI(session.getId()) + "客户端的数据...");
+        Log4jUtil.instance.info("服务端收到来自" + getIMEI(session.getId()) + "客户端的数据...");
 
         AnimalLocMsg animalLocMsg =(AnimalLocMsg) message;
-        Log4jUtil.instance.debug("----------数据内容-----------");
+        Log4jUtil.instance.info("----------数据内容-----------");
         String decodeHex = DatatypeConverter.printHexBinary(animalLocMsg.getContent());
-        Log4jUtil.instance.debug(decodeHex);
-        Log4jUtil.instance.debug("-----------------------------");
+        Log4jUtil.instance.info(decodeHex);
+        Log4jUtil.instance.info("-----------------------------");
 
         handleAnimalLocMsg(animalLocMsg, session.getId());
 
@@ -60,13 +60,13 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
 
     @Override
     public void messageSent(IoSession session, Object message) throws Exception {
-        Log4jUtil.instance.debug("服务端向" + getIMEI(session.getId()) + "发送信息成功...");
+        Log4jUtil.instance.info("服务端向" + getIMEI(session.getId()) + "发送信息成功...");
 
         AnimalLocMsg animalLocMsg =(AnimalLocMsg) message;
-        Log4jUtil.instance.debug("----------数据内容-----------");
+        Log4jUtil.instance.info("----------数据内容-----------");
         String decodeHex = DatatypeConverter.printHexBinary(animalLocMsg.getContent());
-        Log4jUtil.instance.debug(decodeHex);
-        Log4jUtil.instance.debug("-----------------------------");
+        Log4jUtil.instance.info(decodeHex);
+        Log4jUtil.instance.info("-----------------------------");
     }
 
     private void handleAnimalLocMsg(AnimalLocMsg animalLocMsg, Long sessionId) {
@@ -85,12 +85,12 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
 
     @Override
     public void sessionClosed(IoSession session) throws Exception {
-        Log4jUtil.instance.debug("服务端与客户端的连接关闭...");
+        Log4jUtil.instance.info("服务端与客户端的连接关闭...");
     }
 
     @Override
     public void sessionIdle(IoSession session, IdleStatus status) throws Exception {
-        Log4jUtil.instance.debug("服务端进入空闲状态...");
+//        Log4jUtil.instance.debug("服务端进入空闲状态...");
     }
 
     @Override

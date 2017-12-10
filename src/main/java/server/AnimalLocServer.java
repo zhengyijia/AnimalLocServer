@@ -32,7 +32,7 @@ public class AnimalLocServer {
         // 设置端口号
         String portString = PropertiesUtil.getProperty("mina.properties").getProperty("mina.port");
         acceptor.bind(new InetSocketAddress(Integer.parseInt(portString)));
-        Log4jUtil.instance.debug("服务端启动...端口：" + portString);
+        Log4jUtil.instance.info("服务端启动...端口：" + portString);
 
     }
 
