@@ -1,117 +1,53 @@
-2017-12-10 18:12:48 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) CREATED
-2017-12-10 18:12:48 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) OPENED
-2017-12-10 18:12:48 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:157) RECEIVED: HeapBuffer[pos=0 lim=15 cap=2048: 78 78 0A 01 01 23 45 67 89 01 23 45 01 0D 0A]
-2017-12-10 18:12:49 [NioProcessor-2] INFO org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.1.0.Final}
-2017-12-10 18:12:49 [NioProcessor-2] INFO org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found
-2017-12-10 18:12:49 [NioProcessor-2] INFO org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist
-2017-12-10 18:12:49 [NioProcessor-2] INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2017-12-10 18:12:52 [NioProcessor-2] WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2017-12-10 18:12:52 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://localhost;database=db_test]
-2017-12-10 18:12:52 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) HHH10001001: Connection properties: {user=AnimalTest, password=123456}
-2017-12-10 18:12:52 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) HHH10001003: Autocommit mode: false
-2017-12-10 18:12:52 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) HHH000115: Hibernate connection pool size: 20 (min=1)
-2017-12-10 18:12:53 [NioProcessor-2] INFO org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
-2017-12-10 18:12:59 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:13:09 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:13:19 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:13:29 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:13:30 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) CLOSED
-2017-12-10 18:13:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) CREATED
-2017-12-10 18:13:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) OPENED
-2017-12-10 18:13:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:157) RECEIVED: HeapBuffer[pos=0 lim=15 cap=2048: 78 78 0A 01 01 23 45 67 89 01 23 45 01 0D 0A]
-2017-12-10 18:13:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:13:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:14:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:14:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:14:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:14:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:14:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:14:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:15:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:15:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:15:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:15:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:15:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:15:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:16:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:16:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:16:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:16:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:16:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:16:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:17:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:17:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:17:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:17:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:17:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:17:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:18:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:18:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:18:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:18:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:18:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:18:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:19:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:19:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:19:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:19:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:19:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:19:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:20:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:20:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:20:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:20:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:20:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:20:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:21:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:21:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:21:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:21:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:21:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:21:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:22:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:22:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:22:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:22:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:22:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:22:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:23:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:23:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:23:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:23:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:23:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:23:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:24:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:24:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:24:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:24:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:24:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:24:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:25:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:25:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:25:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:25:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:25:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:25:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:26:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:26:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:26:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:26:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:26:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:26:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:27:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:27:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:27:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:27:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:27:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:27:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:28:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:28:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:28:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:28:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:28:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:28:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:29:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:29:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:29:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
-2017-12-10 18:29:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:07:27 [main] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端启动...端口：8765
+2017-12-10 19:07:33 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) CREATED
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端与客户端创建连接...
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 客户端ip及端口：/127.0.0.1:1949
+2017-12-10 19:07:33 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) OPENED
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端与客户端连接打开...
+2017-12-10 19:07:33 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:157) RECEIVED: HeapBuffer[pos=0 lim=30 cap=2048: 78 78 0A 01 01 23 45 67 89 01 23 45 01 0D 0A 78...]
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 接收到的完整内容：78780A010123456789012345010D0A78780A010123456789012345010D0A
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 接收到的完整内容：78780A010123456789012345010D0A
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端收到来自null客户端的数据...
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) ----------数据内容-----------
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 012345678901234501
+2017-12-10 19:07:33 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) -----------------------------
+2017-12-10 19:07:33 [NioProcessor-2] INFO org.hibernate.Version.logVersion(Version.java:37) HHH000412: Hibernate Core {5.1.0.Final}
+2017-12-10 19:07:33 [NioProcessor-2] INFO org.hibernate.cfg.Environment.<clinit>(Environment.java:213) HHH000206: hibernate.properties not found
+2017-12-10 19:07:33 [NioProcessor-2] INFO org.hibernate.cfg.Environment.buildBytecodeProvider(Environment.java:317) HHH000021: Bytecode provider name : javassist
+2017-12-10 19:07:34 [NioProcessor-2] INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-10 19:07:36 [NioProcessor-2] WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:71) HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2017-12-10 19:07:36 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:127) HHH10001005: using driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] at URL [jdbc:sqlserver://localhost;database=db_test]
+2017-12-10 19:07:36 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:133) HHH10001001: Connection properties: {user=AnimalTest, password=123456}
+2017-12-10 19:07:36 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildCreator(DriverManagerConnectionProviderImpl.java:141) HHH10001003: Autocommit mode: false
+2017-12-10 19:07:36 [NioProcessor-2] INFO org.hibernate.engine.jdbc.connections.internal.PooledConnections.<init>(PooledConnections.java:39) HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-12-10 19:07:36 [NioProcessor-2] INFO org.hibernate.dialect.Dialect.<init>(Dialect.java:156) HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2017-12-10 19:07:38 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端收到来自0123456789012345客户端的数据...
+2017-12-10 19:07:38 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) ----------数据内容-----------
+2017-12-10 19:07:38 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 012345678901234501
+2017-12-10 19:07:38 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) -----------------------------
+2017-12-10 19:07:48 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:07:58 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:08:00 [NioProcessor-2] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) CLOSED
+2017-12-10 19:08:00 [NioProcessor-2] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端与客户端的连接关闭...
+2017-12-10 19:08:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) CREATED
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端与客户端创建连接...
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 客户端ip及端口：/127.0.0.1:1955
+2017-12-10 19:08:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) OPENED
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端与客户端连接打开...
+2017-12-10 19:08:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:157) RECEIVED: HeapBuffer[pos=0 lim=30 cap=2048: 78 78 0A 01 01 23 45 67 89 01 23 45 01 0D 0A 78...]
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 接收到的完整内容：78780A010123456789012345010D0A78780A010123456789012345010D0A
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 接收到的完整内容：78780A010123456789012345010D0A
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端收到来自null客户端的数据...
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) ----------数据内容-----------
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 012345678901234501
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) -----------------------------
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 服务端收到来自0123456789012345客户端的数据...
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) ----------数据内容-----------
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) 012345678901234501
+2017-12-10 19:08:01 [NioProcessor-3] INFO util.Log4jUtil.info(Log4jUtil.java:30) -----------------------------
+2017-12-10 19:08:11 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:08:21 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:08:31 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:08:41 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:08:51 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE
+2017-12-10 19:09:01 [NioProcessor-3] INFO org.apache.mina.filter.logging.LoggingFilter.log(LoggingFilter.java:186) IDLE

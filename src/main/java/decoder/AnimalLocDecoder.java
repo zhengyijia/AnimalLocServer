@@ -7,6 +7,8 @@ import org.apache.mina.filter.codec.CumulativeProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 import util.Log4jUtil;
 
+import javax.xml.bind.DatatypeConverter;
+
 public class AnimalLocDecoder extends CumulativeProtocolDecoder {
 
     @Override
@@ -15,6 +17,13 @@ public class AnimalLocDecoder extends CumulativeProtocolDecoder {
         while (buffer.remaining() > 3) {
             //记录解码数据起始位置
             buffer.mark();
+
+            // just for debug
+            byte[] data = new byte[buffer.remaining()];
+            buffer.get(data);
+            Log4jUtil.instance.info("接收到的完整内容："
+                    + DatatypeConverter.printHexBinary(data));
+            buffer.reset();
 
             // 读取包格式及大小
             short startBit = buffer.getShort();
