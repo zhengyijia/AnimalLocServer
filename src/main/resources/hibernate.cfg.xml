@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <!-- 避免中文乱码useUnicode=true&characterEncoding=UTF-8 -->
-        <property name="connection.url">jdbc:sqlserver://localhost;database=db_test</property>
+        <property name="connection.url">jdbc:sqlserver://localhost;database=db_animal</property>
         <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="connection.username">AnimalTest</property>
         <property name="connection.password">123456</property>

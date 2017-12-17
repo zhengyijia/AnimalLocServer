@@ -3,7 +3,7 @@ package entity;
 public class AnimalLocMsg {
 
     private short startBit;     // 起始位
-    private byte packageLen;    // 数据长度
+    private byte packageLen;    // 数据长度（可能有其他用途）
     private byte protocolNo;    // 协议号
     private byte[] content;     // 数据内容
     private short endBit;       // 停止位
