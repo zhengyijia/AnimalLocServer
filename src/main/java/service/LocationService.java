@@ -6,6 +6,7 @@ import entity.AnimalLocMsg;
 import entity.ContentMsgBean.LocMsgBean;
 import entity.TableBean.AnimalLocLocInfoEntity;
 import model.LocationModel;
+import org.apache.mina.core.session.IoSession;
 
 public class LocationService implements LocationContract.ILocationService {
 
@@ -19,8 +20,8 @@ public class LocationService implements LocationContract.ILocationService {
 
     // 处理接收到的消息
     @Override
-    public void handleMsg(AnimalLocMsg animalLocMsg, Long sessionId) {
-        String IMEI = mAnimalLocHandler.getIMEI(sessionId);
+    public void handleMsg(AnimalLocMsg animalLocMsg, IoSession session) {
+        String IMEI = mAnimalLocHandler.getIMEI(session.getId());
 
         if (!checkIMEI(IMEI))
             return;

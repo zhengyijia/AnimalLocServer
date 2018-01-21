@@ -18,7 +18,9 @@ public class AnimalLocEncoder implements ProtocolEncoder {
         buffer.putShort(animalLocMsg.getStartBit());
         buffer.put(animalLocMsg.getPackageLen());
         buffer.put(animalLocMsg.getProtocolNo());
-        buffer.put(animalLocMsg.getContent());
+        if (null != animalLocMsg.getContent()) {
+            buffer.put(animalLocMsg.getContent());
+        }
         buffer.putShort(animalLocMsg.getEndBit());
 
         buffer.flip();

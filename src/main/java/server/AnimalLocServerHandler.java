@@ -54,7 +54,7 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
         Log4jUtil.instance.info(decodeHex);
         Log4jUtil.instance.info("-----------------------------");
 
-        handleAnimalLocMsg(animalLocMsg, session.getId());
+        handleAnimalLocMsg(animalLocMsg, session);
 
     }
 
@@ -64,20 +64,23 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
 
         AnimalLocMsg animalLocMsg =(AnimalLocMsg) message;
         Log4jUtil.instance.info("----------数据内容-----------");
-        String decodeHex = DatatypeConverter.printHexBinary(animalLocMsg.getContent());
+        String decodeHex = "";
+        if (null != animalLocMsg.getContent()) {
+            decodeHex = DatatypeConverter.printHexBinary(animalLocMsg.getContent());
+        }
         Log4jUtil.instance.info(decodeHex);
         Log4jUtil.instance.info("-----------------------------");
     }
 
-    private void handleAnimalLocMsg(AnimalLocMsg animalLocMsg, Long sessionId) {
+    private void handleAnimalLocMsg(AnimalLocMsg animalLocMsg, IoSession session) {
         switch (animalLocMsg.getProtocolNo()) {
             case 0x01:
                 // 登录消息
-                mLoginService.handleMsg(animalLocMsg, sessionId);
+                mLoginService.handleMsg(animalLocMsg, session);
                 break;
             case 0x10:
                 // 定位数据包
-                mLocationService.handleMsg(animalLocMsg, sessionId);
+                mLocationService.handleMsg(animalLocMsg, session);
                 break;
             default:
         }
@@ -112,6 +115,12 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
         }
 
         return IMEIs.get(sessionId);
+    }
+
+    // 发送数据
+    @Override
+    public void sentMsg(IoSession session, AnimalLocMsg animalLocMsg) {
+        session.write(animalLocMsg);
     }
 
 }
