@@ -27,7 +27,7 @@ public class AnimalLocServer {
         acceptor.setHandler(new AnimalLocServerHandler());
 
         acceptor.getSessionConfig().setReadBufferSize(2048);
-        acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 10);
+        acceptor.getSessionConfig().setIdleTime(IdleStatus.BOTH_IDLE, 3000);
 
         // 设置端口号
         String portString = PropertiesUtil.getProperty("mina.properties").getProperty("mina.port");

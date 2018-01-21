@@ -14,6 +14,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MinaClient {
 
@@ -37,14 +39,20 @@ public class MinaClient {
         connector.setHandler(new MinaClientHandler());
         IoSession session = null;
         BufferedReader scanner = new BufferedReader(new InputStreamReader(System.in));
+        ConnectFuture future = connector.connect(new InetSocketAddress(
+                HOST, PORT));// 创建连接
+        future.awaitUninterruptibly();// 等待连接创建完成
+        session = future.getSession();// 获得session
         while (true) {
             try {
                 String s = scanner.readLine();
-                byte[] content = DatatypeConverter.parseHexBinary(s);
-                ConnectFuture future = connector.connect(new InetSocketAddress(
-                        HOST, PORT));// 创建连接
-                future.awaitUninterruptibly();// 等待连接创建完成
-                session = future.getSession();// 获得session
+
+                // 去除空格
+                Pattern pattern = Pattern.compile("\\s*");
+                Matcher m = pattern.matcher(s);
+                byte[] content = DatatypeConverter.parseHexBinary(m.replaceAll(""));
+
+                // 构造消息实体
                 AnimalLocMsg msg = new AnimalLocMsg();
                 msg.setStartBit((short)0x7878);
                 msg.setPackageLen(content[2]);

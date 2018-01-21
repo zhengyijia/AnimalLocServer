@@ -23,6 +23,13 @@ public class LoginService implements LoginContract.ILoginService {
         LoginMsgBean loginMsgBean = new LoginMsgBean(animalLocMsg);
 
         if(!checkIMEI(loginMsgBean)) {
+            AnimalLocMsg msg = new AnimalLocMsg();
+            msg.setStartBit((short) 0x7878);
+            msg.setPackageLen((byte)0x01);
+            msg.setContent(null);
+            msg.setProtocolNo((byte)0x44);
+            msg.setEndBit((short)0x0D0A);
+            mAnimalLocHandler.sentMsg(session, msg);
             return;
         }
 

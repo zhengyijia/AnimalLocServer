@@ -23,9 +23,6 @@ public class LocationService implements LocationContract.ILocationService {
     public void handleMsg(AnimalLocMsg animalLocMsg, IoSession session) {
         String IMEI = mAnimalLocHandler.getIMEI(session.getId());
 
-        if (!checkIMEI(IMEI))
-            return;
-
         LocMsgBean locMsgBean = new LocMsgBean(animalLocMsg);
 
         AnimalLocLocInfoEntity locInfo = new AnimalLocLocInfoEntity();
@@ -36,13 +33,6 @@ public class LocationService implements LocationContract.ILocationService {
         locInfo.setTrack(locMsgBean.getTrack());
 
         mLocationModel.saveLocInfo(locInfo);
-    }
-
-    private boolean checkIMEI(String IMEI) {
-        if (IMEI == null)
-            return false;
-
-        return true;
     }
 
 }

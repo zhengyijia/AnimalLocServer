@@ -1,5 +1,6 @@
 package server;
 
+import contract.CommonContract;
 import contract.IAnimalLocHandler;
 import contract.LocationContract;
 import contract.LoginContract;
@@ -7,6 +8,7 @@ import entity.AnimalLocMsg;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
+import service.CommonService;
 import service.LocationService;
 import service.LoginService;
 import util.Log4jUtil;
@@ -17,6 +19,7 @@ import java.util.Map;
 
 public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalLocHandler {
 
+    private CommonContract.ICommonService mCommonService;
     private LoginContract.ILoginService mLoginService;
     private LocationContract.ILocationService mLocationService;
 
@@ -27,6 +30,7 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
     }
 
     private void initService() {
+        mCommonService = new CommonService(this);
         mLoginService = new LoginService(this);
         mLocationService = new LocationService(this);
     }
@@ -73,6 +77,14 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
     }
 
     private void handleAnimalLocMsg(AnimalLocMsg animalLocMsg, IoSession session) {
+        // 若非登录消息，则需要检查设备是否登录成功
+        if (animalLocMsg.getProtocolNo() != 0x01) {
+            String IMEI = getIMEI(session.getId());
+
+            if (!checkIMEI(IMEI))
+                return;
+        }
+
         switch (animalLocMsg.getProtocolNo()) {
             case 0x01:
                 // 登录消息
@@ -82,8 +94,22 @@ public class AnimalLocServerHandler extends IoHandlerAdapter implements IAnimalL
                 // 定位数据包
                 mLocationService.handleMsg(animalLocMsg, session);
                 break;
+            case 0x15:// 恢复出厂设置
+            case 0x30:// 更新时间
+                mCommonService.handleMsg(animalLocMsg, session);
+                break;
             default:
         }
+    }
+
+    // 检查设备是否已登录成功
+    private boolean checkIMEI(String IMEI) {
+        if (null == IMEI) {
+            Log4jUtil.instance.info("该设备未登录");
+            return false;
+        }
+
+        return true;
     }
 
     @Override
